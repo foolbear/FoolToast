@@ -1,12 +1,13 @@
-# FoolToast
-Simple Toast for SwiftUI
-
-Installation:
-Swift package Manager
-
-Usage:
-FYI: FoolToastTestView.swift
-
+# FoolToast 
+Simple Toast for SwiftUI for multiple Views  
+ 
+## Installation:  
+Swift package Manager  
+ 
+## Usage: 
+FYI: FoolToastTestView.swift 
+ 
+(```)
 public struct FoolToastTestView: View {
     public var body: some View {
         ZStack {
@@ -33,3 +34,4 @@ public struct FoolToastTestView: View {
         .foolToast()
     }
 }
+(```)
