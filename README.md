@@ -1,12 +1,19 @@
 # FoolToast 
-Simple Toast for SwiftUI for multiple Views  
+Simple Toast for SwiftUI for multiple toasts and multiple Views with simple animation.  
  
-## Installation:  
-Swift package Manager  
+## Installation: 
+Swift package Manager   
  
-## Usage: 
-FYI: FoolToastTestView.swift 
+## Usage:  
  
+### show toast when action 
+showFoolToast(Text("圣诞节").foregroundColor(.red)+Text("快乐 🎄")) 
+ 
+### make View FoolToast supportted 
+View.foolToast() 
+ 
+### sample code 
+FoolToastTestView.swift  
 ```
 public struct FoolToastTestView: View {
     public var body: some View {
