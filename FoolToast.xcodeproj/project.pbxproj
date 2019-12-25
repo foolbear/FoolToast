@@ -17,6 +17,7 @@
 		E94363E523B31A4E000D3430 /* FoolToastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolToastManager.swift; sourceTree = "<group>"; };
 		E94363E623B31A4E000D3430 /* FoolToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoolToastView.swift; sourceTree = "<group>"; };
 		E94363E923B31D14000D3430 /* FoolToastTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoolToastTestView.swift; sourceTree = "<group>"; };
+		E94363EB23B31F26000D3430 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		"FoolToast::FoolToast::Product" /* FoolToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoolToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				E94363EB23B31F26000D3430 /* README.md */,
 				E94363E223B31622000D3430 /* FoolToast */,
 				OBJ_14 /* Products */,
 			);

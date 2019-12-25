@@ -9,8 +9,8 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct FoolToastTestView: View {
-    var body: some View {
+public struct FoolToastTestView: View {
+    public var body: some View {
         ZStack {
             Color.clear.edgesIgnoringSafeArea(.all)
             VStack {
