@@ -1,0 +1,2 @@
+# FoolToast
+Toast for SwiftUI
