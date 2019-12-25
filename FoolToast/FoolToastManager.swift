@@ -20,11 +20,11 @@ public struct Toast: Identifiable {
 
 @available(iOS 13.0, *)
 public class FoolToastManager: ObservableObject {
-    static let shared = FoolToastManager()
+    public static let shared = FoolToastManager()
     private init() {}
     
-    var maxToastCount = 8
-    var maxTimeToastShowing = 10.0
+    public var maxToastCount = 8
+    public var maxTimeToastShowing = 10.0
     @Published var toasts: [Toast] = []
     
     func showToast(toast: Toast) {

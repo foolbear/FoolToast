@@ -6,12 +6,19 @@ Swift package Manager
  
 ## Usage:  
  
-### show toast when action 
+### configuration 
+```
+FoolToastManager.shared.maxToastCount = 3 
+FoolToastManager.shared.maxTimeToastShowing = 10.0 
+``` 
+### show toast when action
+```
 showFoolToast(Text("圣诞节").foregroundColor(.red)+Text("快乐 🎄")) 
- 
-### make View FoolToast supportted 
+```
+### make View FoolToast supportted
+```
 View.foolToast() 
- 
+```
 ### sample code 
 FoolToastTestView.swift  
 ```
