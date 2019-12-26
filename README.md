@@ -1,5 +1,6 @@
 # FoolToast 
 Simple Toast for SwiftUI for multiple toasts and multiple Views with simple animation.  
+[![Demo video](http://img.youtube.com/vi/ypLRy-jUdcw/0.jpg)](https://www.youtube.com/embed/ypLRy-jUdcw "Demo video") 
  
 ## Installation: 
 Swift package Manager   
