@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E94363E723B31A4E000D3430 /* FoolToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E523B31A4E000D3430 /* FoolToastManager.swift */; };
 		E94363E823B31A4E000D3430 /* FoolToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E623B31A4E000D3430 /* FoolToastView.swift */; };
 		E94363EA23B31D14000D3430 /* FoolToastTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E923B31D14000D3430 /* FoolToastTestView.swift */; };
+		E9995EF823BF93CC00E5A527 /* FoolUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = E9995EF723BF93CC00E5A527 /* FoolUtilities */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				E9995EF823BF93CC00E5A527 /* FoolUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +53,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -59,7 +61,6 @@
 				E94363E223B31622000D3430 /* FoolToast */,
 				OBJ_14 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +78,9 @@
 			dependencies = (
 			);
 			name = FoolToast;
+			packageProductDependencies = (
+				E9995EF723BF93CC00E5A527 /* FoolUtilities */,
+			);
 			productName = FoolToast;
 			productReference = "FoolToast::FoolToast::Product" /* FoolToast.framework */;
 			productType = "com.apple.product-type.framework";
@@ -116,7 +120,10 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
+			packageReferences = (
+				E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */,
+			);
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,7 +169,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = FoolToast.xcodeproj/FoolToast_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -193,7 +203,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = FoolToast.xcodeproj/FoolToast_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -274,7 +287,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -310,6 +324,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://foolbear@bitbucket.org/foolbear/foolutilities.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9995EF723BF93CC00E5A527 /* FoolUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */;
+			productName = FoolUtilities;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

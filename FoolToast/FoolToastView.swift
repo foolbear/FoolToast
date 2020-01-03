@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import FoolUtilities
 
 @available(iOS 13.0, *)
 struct FoolToastView<Presenting>: View where Presenting: View {
     let presenting: () -> Presenting
     @ObservedObject var toastManager = FoolToastManager.shared
+    @ObservedObject var keyboard: FoolKeyboard = FoolKeyboard()
     
     var body: some View {
         let isShowing = toastManager.toasts.count != 0
@@ -22,6 +24,7 @@ struct FoolToastView<Presenting>: View where Presenting: View {
                     ForEach(toastManager.toasts) { toast in
                         FoolToastItemView(toast: toast)
                     }
+                    Spacer().frame(height: keyboard.height)
                 }
                 .opacity(isShowing ? 1 : 0)
         }
