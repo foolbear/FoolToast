@@ -12,7 +12,7 @@ import FoolUtilities
 struct FoolToastView<Presenting>: View where Presenting: View {
     let presenting: () -> Presenting
     @ObservedObject var toastManager = FoolToastManager.shared
-    @ObservedObject var keyboard: FoolKeyboard = FoolKeyboard()
+    @ObservedObject var keyboard = FoolKeyboard.shared
     
     var body: some View {
         let isShowing = toastManager.toasts.count != 0
