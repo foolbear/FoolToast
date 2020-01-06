@@ -10,7 +10,7 @@
 		E94363E723B31A4E000D3430 /* FoolToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E523B31A4E000D3430 /* FoolToastManager.swift */; };
 		E94363E823B31A4E000D3430 /* FoolToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E623B31A4E000D3430 /* FoolToastView.swift */; };
 		E94363EA23B31D14000D3430 /* FoolToastTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94363E923B31D14000D3430 /* FoolToastTestView.swift */; };
-		E9995EF823BF93CC00E5A527 /* FoolUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = E9995EF723BF93CC00E5A527 /* FoolUtilities */; };
+		E952847223C35AF2004CDCFC /* FoolUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = E952847123C35AF2004CDCFC /* FoolUtilities */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				E9995EF823BF93CC00E5A527 /* FoolUtilities in Frameworks */,
+				E952847223C35AF2004CDCFC /* FoolUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			);
 			name = FoolToast;
 			packageProductDependencies = (
-				E9995EF723BF93CC00E5A527 /* FoolUtilities */,
+				E952847123C35AF2004CDCFC /* FoolUtilities */,
 			);
 			productName = FoolToast;
 			productReference = "FoolToast::FoolToast::Product" /* FoolToast.framework */;
@@ -122,7 +122,7 @@
 			);
 			mainGroup = OBJ_5;
 			packageReferences = (
-				E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */,
+				E952847023C35AF2004CDCFC /* XCRemoteSwiftPackageReference "FoolUtilities" */,
 			);
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
@@ -326,20 +326,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */ = {
+		E952847023C35AF2004CDCFC /* XCRemoteSwiftPackageReference "FoolUtilities" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://foolbear@bitbucket.org/foolbear/foolutilities.git";
+			repositoryURL = "https://github.com/foolbear/FoolUtilities.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 1.2.2;
+				minimumVersion = 1.2.9;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E9995EF723BF93CC00E5A527 /* FoolUtilities */ = {
+		E952847123C35AF2004CDCFC /* FoolUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E9995EF623BF93CC00E5A527 /* XCRemoteSwiftPackageReference "foolutilities" */;
+			package = E952847023C35AF2004CDCFC /* XCRemoteSwiftPackageReference "FoolUtilities" */;
 			productName = FoolUtilities;
 		};
 /* End XCSwiftPackageProductDependency section */
