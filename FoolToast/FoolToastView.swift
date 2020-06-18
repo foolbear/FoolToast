@@ -9,16 +9,15 @@ import SwiftUI
 import FoolUtilities
 
 @available(iOS 13.0, *)
-struct FoolToastView<Presenting>: View where Presenting: View {
-    let presenting: () -> Presenting
+struct FoolToastView: ViewModifier {
     @ObservedObject var toastManager = FoolToastManager.shared
     @ObservedObject var keyboard = FoolKeyboard.shared
     
-    var body: some View {
+    func body(content: Content) -> some View {
         let isShowing = toastManager.toasts.count != 0
         return
             ZStack(alignment: .center) {
-                self.presenting()
+                content
                 VStack {
                     Spacer()
                     ForEach(toastManager.toasts) { toast in
@@ -65,6 +64,6 @@ struct FoolToastItemView: View {
 @available(iOS 13.0, *)
 public extension View {
     func foolToast() -> some View {
-        FoolToastView(presenting: { self })
+        self.modifier(FoolToastView())
     }
 }
