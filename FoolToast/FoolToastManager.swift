@@ -8,6 +8,10 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
+public func showFoolToast(_ toast: String) {
+    FoolToastManager.shared.showToast(toast: Toast(content: Text(toast)))
+}
+
 public func showFoolToast(_ toast: Text) {
     FoolToastManager.shared.showToast(toast: Toast(content: toast))
 }
