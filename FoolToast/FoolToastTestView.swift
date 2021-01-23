@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 11.0, *)
 public struct FoolToastTestView: View {
     public init() {}
     public var body: some View {
@@ -37,7 +37,7 @@ public struct FoolToastTestView: View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 11.0, *)
 struct FoolToastTestView_Previews: PreviewProvider {
     static var previews: some View {
         FoolToastTestView()

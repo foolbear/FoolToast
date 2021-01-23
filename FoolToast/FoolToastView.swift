@@ -8,10 +8,12 @@
 import SwiftUI
 import FoolUtilities
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 11.0, *)
 struct FoolToastView: ViewModifier {
     @ObservedObject var toastManager = FoolToastManager.shared
+    #if !os(macOS)
     @ObservedObject var keyboard = FoolKeyboard.shared
+    #endif
     
     func body(content: Content) -> some View {
         let isShowing = toastManager.toasts.count != 0
@@ -23,14 +25,16 @@ struct FoolToastView: ViewModifier {
                     ForEach(toastManager.toasts) { toast in
                         FoolToastItemView(toast: toast)
                     }
+                    #if !os(macOS)
                     Spacer().frame(height: keyboard.height)
+                    #endif
                 }
                 .opacity(isShowing ? 1 : 0)
         }
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 11.0, *)
 struct FoolToastItemView: View {
     var toast: Toast
     @State private var isShowing = false
@@ -61,7 +65,7 @@ struct FoolToastItemView: View {
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 13.0, OSX 11.0, *)
 public extension View {
     func foolToast() -> some View {
         self.modifier(FoolToastView())
