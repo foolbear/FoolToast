@@ -52,7 +52,7 @@ struct FoolToastItemView: View {
             .cornerRadius(5)
             .padding(.all, 2)
             .opacity(isShowing ? 1 : 0)
-            .animation(isShowing ? .easeIn(duration: timeShowIn) : .easeOut(duration: toastManager.maxTimeToastShowing - timeShowIn - timeShowing))
+            .animation(isShowing ? .easeIn(duration: timeShowIn) : .easeOut(duration: toastManager.maxTimeToastShowing - timeShowIn - timeShowing), value: isShowing)
             .onAppear() {
                 self.isShowing = true
                 DispatchQueue.main.asyncAfter(deadline: .now() + self.timeShowing) {
